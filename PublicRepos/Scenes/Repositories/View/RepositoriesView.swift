@@ -8,17 +8,9 @@
 import SwiftUI
 
 struct RepositoriesView: View {
-    @StateObject private var viewModel = RepositoriesViewModel() // Use @StateObject to initialize and own the ViewModel
-    init() {
-        // Customize navigation bar appearance
-        let appearance = UINavigationBarAppearance()
-        appearance.configureWithOpaqueBackground()
-        appearance.backgroundColor = AppColors.maincolor.color
-        
-        // Apply appearance settings
-        UINavigationBar.appearance().standardAppearance = appearance
-        UINavigationBar.appearance().scrollEdgeAppearance = appearance
-    }
+    // Use @StateObject to initialize and own the ViewModel and the viewmodel has view lifecycle
+    // i didn't use @ObservedObject because i don't want to init viewmodel else where, or be owned by something else other than the view
+    @StateObject private var viewModel = RepositoriesViewModel()
     var body: some View {
         NavigationView {
             List(viewModel.repositories) { repository in // Use repositories from ViewModel
@@ -31,6 +23,7 @@ struct RepositoriesView: View {
                                 ProgressView() // Placeholder while loading
                             }
                             .frame(width: 50, height: 50)
+                            .clipShape(Circle())
                         } else {
                             Image(systemName: "person.crop.circle.fill")
                                 .resizable()

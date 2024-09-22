@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct RepositoryDetailsView: View {
-    @StateObject private var viewModel = RepositoryDetailsViewModel() // Initialize the ViewModel
+    @StateObject private var viewModel = RepositoryDetailsViewModel()
     var fullName: String
     init(fullName: String) {
         self.fullName = fullName
@@ -43,11 +43,10 @@ struct RepositoryDetailsView: View {
             }
             Spacer()
         }.onAppear {
-            viewModel.fetchRepositoryDetails(fullName: fullName ) // Call fetch function when the view appears
+            viewModel.fetchRepositoryDetails(fullName: fullName )
         }
         .padding()
-        .navigationTitle((viewModel.repository?.name ?? "No name available") + " Details")
-        .navigationBarTitleDisplayMode(.automatic)
+        .navigationBarTitleDisplayMode(.inline)
         .overlay(
             Group {
                 if viewModel.isLoading {
