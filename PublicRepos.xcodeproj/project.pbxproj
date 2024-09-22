@@ -35,6 +35,7 @@
 		547DFF672C9F05D0002F5DBD /* MockRepositoryDetailsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547DFF662C9F05D0002F5DBD /* MockRepositoryDetailsService.swift */; };
 		547DFF6F2C9F30B2002F5DBD /* ApiErrorsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547DFF6E2C9F30B2002F5DBD /* ApiErrorsEnum.swift */; };
 		547DFF752C9F70FB002F5DBD /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547DFF742C9F70FB002F5DBD /* AppColors.swift */; };
+		547DFF7B2C9F9A9F002F5DBD /* RepositoryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547DFF7A2C9F9A9F002F5DBD /* RepositoryRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		547DFF682C9F0FC9002F5DBD /* ReadMe.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ReadMe.md; sourceTree = "<group>"; };
 		547DFF6E2C9F30B2002F5DBD /* ApiErrorsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiErrorsEnum.swift; sourceTree = "<group>"; };
 		547DFF742C9F70FB002F5DBD /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
+		547DFF7A2C9F9A9F002F5DBD /* RepositoryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +226,7 @@
 		547DFF312C9DD4E5002F5DBD /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				547DFF792C9F9A8A002F5DBD /* SharedViews */,
 				547DFF322C9DD4EE002F5DBD /* Repositories */,
 				547DFF332C9DD4F7002F5DBD /* RepositoryDetails */,
 			);
@@ -424,6 +427,14 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		547DFF792C9F9A8A002F5DBD /* SharedViews */ = {
+			isa = PBXGroup;
+			children = (
+				547DFF7A2C9F9A9F002F5DBD /* RepositoryRowView.swift */,
+			);
+			path = SharedViews;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -564,6 +575,7 @@
 				547DFF442C9E3C08002F5DBD /* CachedAsyncImage.swift in Sources */,
 				547DFF5B2C9EECFC002F5DBD /* RepositoryDetailsApiProtocol.swift in Sources */,
 				547DFF272C9C88B2002F5DBD /* ApiRouter.swift in Sources */,
+				547DFF7B2C9F9A9F002F5DBD /* RepositoryRowView.swift in Sources */,
 				547DFF752C9F70FB002F5DBD /* AppColors.swift in Sources */,
 				547DFF422C9E3BD9002F5DBD /* ImageCashe.swift in Sources */,
 				547DFF3C2C9DEBF6002F5DBD /* RepositoryDetailsView.swift in Sources */,
