@@ -27,11 +27,7 @@ final class MockRepositoriesService: RepositoriesApiProtocol {
     
     // Helper method to load JSON data
     private func loadMockRepositories() async throws -> [RepositoryModel] {
-        guard let url = Bundle(for: type(of: self)).url(forResource: "MockRepositories", withExtension: "json") else {
-            throw NSError(domain: "TestError", code: 1, userInfo: [NSLocalizedDescriptionKey: "MockRepositories.json not found"])
-        }
-        
-        let data = try Data(contentsOf: url)
+        let data = DataLoader().loadJsonData(file: .repositoriesFile)!
         let repositories = try JSONDecoder().decode([RepositoryModel].self, from: data)
         return repositories
     }

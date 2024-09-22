@@ -11,7 +11,7 @@ import XCTest
 final class MockRepositoryDetailsService: RepositoryDetailsApiProtocol {
     var error: APIError?
     
-    func fetchRepositoryDetails(fullName: String) async throws -> PublicRepos.RepositoryDetailsModel {
+    func fetchRepositoryDetails(fullName: String) async throws -> PublicRepos.RepositoryModel {
         // Load mock data from JSON file
         let repo = try loadMockRepositoryDetails()
         if repo.fullName == fullName {
@@ -21,13 +21,9 @@ final class MockRepositoryDetailsService: RepositoryDetailsApiProtocol {
         }
     }
     // Helper method to load JSON data
-    private func loadMockRepositoryDetails() throws -> RepositoryDetailsModel {
-        guard let url = Bundle(for: type(of: self)).url(forResource: "MockRepositoryDetails", withExtension: "json") else {
-            throw NSError(domain: "TestError", code: 1, userInfo: [NSLocalizedDescriptionKey: "MockRepositories.json not found"])
-        }
-        
-        let data = try Data(contentsOf: url)
-        let repo = try JSONDecoder().decode(RepositoryDetailsModel.self, from: data)
+    private func loadMockRepositoryDetails() throws -> RepositoryModel {
+        let data = DataLoader().loadJsonData(file: .repoDetailsFile)!
+        let repo = try JSONDecoder().decode(RepositoryModel.self, from: data)
         return repo
     }
 }
