@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct RepositoriesView: View {
+
     // Use @StateObject to initialize and own the ViewModel and the viewmodel has view lifecycle
     /* i didn't use @ObservedObject
      because i don't want to init viewmodel else where,
      or be owned by something else other than the view*/
     @StateObject private var viewModel = RepositoriesViewModel()
+
     var body: some View {
         NavigationView {
             List(viewModel.repositories) { repository in
@@ -38,9 +40,10 @@ struct RepositoriesView: View {
                     }
                 }
             )
-        }
+        }.accentColor(Color(UIColor.label))
     }
 }
+
 #Preview {
     RepositoriesView()
 }

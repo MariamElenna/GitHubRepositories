@@ -19,6 +19,10 @@ enum AppColors: String, ShapeStyle {
     }
 
     // Convert hex string to UIColor
+//    var uiColor: UIColor {
+//        UIColor(hex: self.rawValue)
+//
+//    }
     var uiColor: UIColor {
         var rgb: UInt64 = 0
         Scanner(string: self.rawValue).scanHexInt64(&rgb)

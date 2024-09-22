@@ -17,12 +17,12 @@ final class RepositoryDateFormattingTest: XCTestCase {
                                              name: nil,
                                              owner: RepositoryOwnerModel(avatarUrl: nil, id: nil, userName: nil),
                                              updatedAt: nil)
-        
+
         let uiRepo = RepositoryUIModel(from: mockRepository)
         XCTAssertTrue(uiRepo.formatedCreationDate.contains("2024"),
                       "Formatted date should contain the year 2024 for recent dates")
     }
-   
+
     // Test formattedDate function with date older than 6 months
     func testFormattedDateOlderThan6Months() {
         let mockRepository = RepositoryModel(createdAt: "2022-01-01T14:37:16Z",
@@ -31,13 +31,13 @@ final class RepositoryDateFormattingTest: XCTestCase {
                                              name: nil,
                                              owner: RepositoryOwnerModel(avatarUrl: nil, id: nil, userName: nil),
                                              updatedAt: nil)
-        
+
         let uiRepo = RepositoryUIModel(from: mockRepository)
         XCTAssertTrue(uiRepo.formatedCreationDate.contains("year")
                       || uiRepo.formatedCreationDate.contains("months"),
                       "Formatted date should return relative time (e.g., '1 year ago')")
     }
-    
+
     // Test formattedDate with nil input
     func testFormattedDateNilInput() {
         let mockRepository = RepositoryModel(createdAt: nil,

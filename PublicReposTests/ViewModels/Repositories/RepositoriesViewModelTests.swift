@@ -9,6 +9,7 @@ import XCTest
 @testable import PublicRepos
 
 final class RepositoriesViewModelTests: XCTestCase {
+
     var viewModel: RepositoriesViewModel!
     var mockService: MockRepositoriesService!
 
@@ -17,6 +18,7 @@ final class RepositoriesViewModelTests: XCTestCase {
         mockService = MockRepositoriesService()
         viewModel = RepositoriesViewModel(repositoriesService: mockService)
     }
+
     override func tearDown() {
         viewModel = nil
         mockService = nil
@@ -26,7 +28,7 @@ final class RepositoriesViewModelTests: XCTestCase {
     func testFetchRepositoriesSuccess() async throws {
         // Given: a mock service with successful response
         let mockService = MockRepositoriesService()
-       // mock
+        // mock
         let viewModel = RepositoriesViewModel(repositoriesService: mockService)
 
         await viewModel.fetchRepositories()
@@ -37,6 +39,7 @@ final class RepositoriesViewModelTests: XCTestCase {
         XCTAssertFalse(viewModel.repositories.isEmpty, "Repositories shouldn't be empty")
         XCTAssertFalse(viewModel.isLoading, "Loading should be false after fetching")
     }
+
     func testFetchRepositoriesNetworkError() async throws {
         // Given: a mock service that fails with a network error
         let mockService = MockRepositoriesService()

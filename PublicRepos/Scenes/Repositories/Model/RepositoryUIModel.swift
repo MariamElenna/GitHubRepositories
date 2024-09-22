@@ -8,15 +8,13 @@
 import Foundation
 
 struct RepositoryUIModel: Identifiable {
+
     let id: Int
     let repoName: String
     let fullName: String
     let ownerName: String
     let ownerAvatar: String?
-    let creationDate: String
-    var formatedCreationDate: String {
-        creationDate.formattedDate
-    }
+    let formatedCreationDate: String
 
     init(from model: RepositoryModel) {
         id = model.id
@@ -24,6 +22,6 @@ struct RepositoryUIModel: Identifiable {
         fullName = model.fullName ?? ""
         ownerName = model.owner.userName ?? "Owner Name Not Exist"
         ownerAvatar = model.owner.avatarUrl
-        creationDate = model.createdAt ?? ""
+        formatedCreationDate = (model.createdAt ?? "").formattedDate
     }
 }

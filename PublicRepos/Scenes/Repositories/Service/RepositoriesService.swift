@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class RepositoriesService: RepositoriesApiProtocol {
+final class RepositoriesService: RepositoriesProtocol {
     func fetchRepositories() async throws -> [RepositoryModel] {
         return try await APIRouter.getRepositories.performRequest([RepositoryModel].self)
     }

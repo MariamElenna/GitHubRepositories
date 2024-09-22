@@ -8,7 +8,7 @@
 import XCTest
 @testable import PublicRepos
 
-final class MockRepositoryDetailsService: RepositoryDetailsApiProtocol {
+final class MockRepositoryDetailsService: RepositoryDetailsProtocol {
     var error: APIError?
 
     func fetchRepositoryDetails(fullName: String) async throws -> PublicRepos.RepositoryModel {

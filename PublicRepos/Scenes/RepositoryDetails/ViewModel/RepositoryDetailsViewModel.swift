@@ -8,15 +8,19 @@
 import Foundation
 
 class RepositoryDetailsViewModel: ObservableObject {
+
     @Published var repository: RepositoryDetailsUIModel?
     @Published var errorMessage: String?
     @Published var isLoading: Bool = false
 
-    private let repositoryDetailsService: RepositoryDetailsApiProtocol
-    init(repositoryDetailsService: RepositoryDetailsApiProtocol = RepositoryDetailsService()) {
+    private let repositoryDetailsService: RepositoryDetailsProtocol
+
+    init(repositoryDetailsService: RepositoryDetailsProtocol = RepositoryDetailsService()) {
         self.repositoryDetailsService = repositoryDetailsService
     }
-    @MainActor func fetchRepositoryDetails(fullName: String) async {
+
+    @MainActor
+    func fetchRepositoryDetails(fullName: String) async {
         isLoading = true
         // Do, catch and try are used to handle the errors the function may throw.
         do {

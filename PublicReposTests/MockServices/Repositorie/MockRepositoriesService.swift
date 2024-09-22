@@ -8,7 +8,7 @@
 import XCTest
 @testable import PublicRepos
 
-final class MockRepositoriesService: RepositoriesApiProtocol {
+final class MockRepositoriesService: RepositoriesProtocol {
     var shouldFail = false
     var error: APIError?
 

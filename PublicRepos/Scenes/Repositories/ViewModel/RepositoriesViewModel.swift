@@ -12,9 +12,9 @@ class RepositoriesViewModel: ObservableObject {
     @Published var error: APIError?
     @Published var isLoading: Bool = false
 
-    private let repositoriesService: RepositoriesApiProtocol
+    private let repositoriesService: RepositoriesProtocol
 
-    init(repositoriesService: RepositoriesApiProtocol = RepositoriesService()) {
+    init(repositoriesService: RepositoriesProtocol = RepositoriesService()) {
         self.repositoriesService = repositoriesService
     }
     // Fetch Repositories

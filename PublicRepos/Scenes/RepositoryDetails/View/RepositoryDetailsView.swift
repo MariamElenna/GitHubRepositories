@@ -8,11 +8,15 @@
 import SwiftUI
 
 struct RepositoryDetailsView: View {
+
     @StateObject private var viewModel = RepositoryDetailsViewModel()
-    var fullName: String
+
+    private let fullName: String
+
     init(fullName: String) {
         self.fullName = fullName
     }
+
     var body: some View {
         VStack(spacing: 10) {
             if let repository = viewModel.repository {

@@ -43,6 +43,7 @@ final class RepositoryModelTest: XCTestCase {
             }
     }
 }
+
 extension Data {
     func json(deletingKeyPaths keyPaths: String...) throws -> Data {
         let decoded = try JSONSerialization.jsonObject(with: self, options: .mutableContainers) as AnyObject

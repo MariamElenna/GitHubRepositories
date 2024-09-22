@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class RepositoryDetailsService: RepositoryDetailsApiProtocol {
+final class RepositoryDetailsService: RepositoryDetailsProtocol {
     func fetchRepositoryDetails(fullName: String) async throws -> RepositoryModel {
         return try await APIRouter.getRepositoryDetails(fullName: fullName).performRequest(RepositoryModel.self)
     }

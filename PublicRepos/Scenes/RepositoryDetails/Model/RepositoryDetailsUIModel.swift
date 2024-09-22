@@ -15,7 +15,6 @@ struct RepositoryDetailsUIModel {
     let description: String
     let creationData: String?
 
-    
     init(from model: RepositoryModel) {
         id = model.id
         repoName = model.name ?? "Name Not Exist"

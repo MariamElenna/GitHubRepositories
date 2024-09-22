@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct RepositoryRowView: View {
-    let repository: RepositoryUIModel
+    var repository: RepositoryUIModel
 
     var body: some View {
         HStack {
@@ -42,4 +42,22 @@ struct RepositoryRowView: View {
             }
         }
     }
+}
+
+@available(iOS 17, *)
+#Preview(traits: .sizeThatFitsLayout) {
+    let mockRepository = RepositoryModel(
+        createdAt: "2024-01-01T12:00:00Z",
+        descriptionField: "This is a sample repository description.",
+        fullName: "owner/Sample Repository",
+        id: 1,
+        name: "Sample Repository",
+        owner: RepositoryOwnerModel(avatarUrl: "https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=250", id: 111, userName: "John Doe"),
+        updatedAt: "2024-01-10T12:00:00Z"
+    )
+
+    let repositoryUIModel = RepositoryUIModel(from: mockRepository)
+
+    return RepositoryRowView(repository: repositoryUIModel)
+
 }
