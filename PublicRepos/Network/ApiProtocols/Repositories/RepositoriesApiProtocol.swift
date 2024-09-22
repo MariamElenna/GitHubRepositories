@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 protocol RepositoriesApiProtocol {
     func fetchRepositories() async throws -> [RepositoryModel]
 }

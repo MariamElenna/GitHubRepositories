@@ -8,12 +8,12 @@
 import Foundation
 
 class RepositoriesViewModel: ObservableObject {
-    @Published var repositories: [RepositoryRowUIModel] = []
+    @Published var repositories: [RepositoryUIModel] = []
     @Published var error: APIError?
     @Published var isLoading: Bool = false
-    
+
     private let repositoriesService: RepositoriesApiProtocol
-    
+
     init(repositoriesService: RepositoriesApiProtocol = RepositoriesService()) {
         self.repositoriesService = repositoriesService
     }
@@ -23,8 +23,8 @@ class RepositoriesViewModel: ObservableObject {
         isLoading = true
         // Do, catch and try are used to handle the errors the function may throw.
         do {
-            self.repositories = try await repositoriesService.fetchRepositories().map { repo -> RepositoryRowUIModel in
-                return RepositoryRowUIModel(from: repo)
+            self.repositories = try await repositoriesService.fetchRepositories().map { repo -> RepositoryUIModel in
+                return RepositoryUIModel(from: repo)
             }
             self.isLoading = false
         } catch let error as APIError {
@@ -35,4 +35,3 @@ class RepositoriesViewModel: ObservableObject {
         }
     }
 }
-

@@ -11,7 +11,7 @@ import XCTest
 final class RepositoryDetailsViewModelTests: XCTestCase {
     var viewModel: RepositoryDetailsViewModel!
     var mockService: MockRepositoryDetailsService!
-    
+
     override func setUp() {
         super.setUp()
         mockService = MockRepositoryDetailsService()
@@ -29,7 +29,7 @@ final class RepositoryDetailsViewModelTests: XCTestCase {
         let repo: RepositoryModel = try await mockService.fetchRepositoryDetails(fullName: "mojombo/grit")
         XCTAssertNotNil(repo, "Repository details should not be nil")
     }
-    
+
     func testFetchRepositoryDetailsFailure() async throws {
         do {
             // When: Fetching repository details
@@ -38,7 +38,9 @@ final class RepositoryDetailsViewModelTests: XCTestCase {
             XCTFail("Expected to throw an error, but got success")
         } catch {
             // Then: Verify that the correct error is thrown
-            XCTAssertEqual((error.localizedDescription), APIError.networkError(URLError(.badURL)).localizedDescription, "Error code should match")
+            XCTAssertEqual((error.localizedDescription),
+                           APIError.networkError(URLError(.badURL)).localizedDescription,
+                           "Error code should match")
         }
     }
 }

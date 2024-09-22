@@ -11,7 +11,7 @@ import XCTest
 final class MockRepositoriesService: RepositoriesApiProtocol {
     var shouldFail = false
     var error: APIError?
-    
+
     func fetchRepositories() async throws -> [RepositoryModel] {
         if shouldFail {
             if let error = error {
@@ -20,11 +20,11 @@ final class MockRepositoriesService: RepositoriesApiProtocol {
                 throw APIError.unknownError
             }
         }
-        
+
         // Load mock data from JSON file
         return try await loadMockRepositories()
     }
-    
+
     // Helper method to load JSON data
     private func loadMockRepositories() async throws -> [RepositoryModel] {
         let data = DataLoader().loadJsonData(file: .repositoriesFile)!

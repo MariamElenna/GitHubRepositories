@@ -12,38 +12,43 @@ final class RepositoryModelTest: XCTestCase {
 
     private let repoObject = DataLoader().loadJsonData(file: .repoDetailsFile)!
 
-    // Test formattedDate function with date less than 6 months ago
-    func testFormattedDateWithin6Months() throws {
-        let recentDate = "2024-05-01T14:37:16Z" // A recent date
-        do {
-            let repo = try JSONDecoder().decode(RepositoryModel.self, from: repoObject)
-            let formattedDate = repo.formattedDate(from: recentDate)
-            XCTAssertTrue(formattedDate.contains("2024"), "Formatted date should contain the year 2023 for recent dates")
-        } catch {
-            throw error
+    // Test missing required keys
+    func testDecoding_whenMissingRequiredKeys_itThrows() throws {
+        try ["id", "owner"].forEach { key in
+            assertThrowsKeyNotFound(key,
+                                    decoding: RepositoryModel.self,
+                                    from: try repoObject.json(deletingKeyPaths: key))
         }
     }
-    
-    // Test formattedDate function with date older than 6 months
-    func testFormattedDateOlderThan6Months() throws {
-        let oldDate = "2022-01-01T14:37:16Z" // More than 6 months ago
-        do {
-            let repo = try JSONDecoder().decode(RepositoryModel.self, from: repoObject)
-            let formattedDate = repo.formattedDate(from: oldDate)
-            XCTAssertTrue(formattedDate.contains("year") || formattedDate.contains("months") || formattedDate.contains("سن") || formattedDate.contains("شهر"), "Formatted date should return relative time (e.g., '1 year ago')")
-        } catch {
-            throw error
-        }
+    // Helper to assert that decoding fails with a keyNotFound error
+    func assertThrowsKeyNotFound<T: Decodable>(_ expectedKey: String,
+                                               decoding: T.Type,
+                                               from data: Data,
+                                               file: StaticString = #file,
+                                               line: UInt = #line) {
+        XCTAssertThrowsError(
+            try JSONDecoder()
+                .decode(decoding, from: data),
+            file: file,
+            line: line) { error in
+                if case let DecodingError.keyNotFound(key, _) = error {
+                    XCTAssertEqual(expectedKey,
+                                   key.stringValue,
+                                   "Expected missing key '\(key.stringValue)' to equal '\(expectedKey)'.",
+                                   file: file,
+                                   line: line)
+                } else {
+                    XCTFail("Expected '.keyNotFound(\(expectedKey))' but got \(error)", file: file, line: line)
+                }
+            }
     }
-    
-    // Test formattedDate with nil input
-    func testFormattedDateNilInput() throws {
-        do {
-            let repo = try JSONDecoder().decode(RepositoryModel.self, from: repoObject)
-            let formattedDate = repo.formattedDate(from: nil)
-            XCTAssertNotNil(formattedDate, "Formatted date should still return a valid value for nil input")
-        } catch {
-            throw error
+}
+extension Data {
+    func json(deletingKeyPaths keyPaths: String...) throws -> Data {
+        let decoded = try JSONSerialization.jsonObject(with: self, options: .mutableContainers) as AnyObject
+        for keyPath in keyPaths {
+            decoded.setValue(nil, forKeyPath: keyPath)
         }
+        return try JSONSerialization.data(withJSONObject: decoded)
     }
 }

@@ -2,87 +2,16 @@
   "sourceLanguage" : "en",
   "strings" : {
     "Created At: %@" : {
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "أنشئ في: %@"
-          }
-        }
-      }
-    },
-    "Created on: %@" : {
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "أنشئ في: %@"
-          }
-        }
-      }
-    },
-    "Failed to load repository details: " : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "فشل في تحميل البيانات"
-          }
-        }
-      }
+
     },
     "Loading..." : {
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "تحميل..."
-          }
-        }
-      }
-    },
-    "Name Not Exist" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "الإسم غير موجود"
-          }
-        }
-      }
-    },
-    "Owner Name Not Exist" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "إسم المالك غير موجود"
-          }
-        }
-      }
+
     },
     "Owner: %@" : {
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "المالك: %@"
-          }
-        }
-      }
+
     },
     "Repositories" : {
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "المستودعات"
-          }
-        }
-      }
+
     }
   },
   "version" : "1.0"

@@ -13,7 +13,7 @@ struct PublicReposApp: App {
         // Customize navigation bar appearance
         let appearance = UINavigationBarAppearance()
         appearance.backgroundColor = UIColor(appColor: .mainColor)
-        appearance.buttonAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor.black] // Change button color
+        appearance.buttonAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor.black]
         // Apply appearance settings
         UINavigationBar.appearance().standardAppearance = appearance
         UINavigationBar.appearance().scrollEdgeAppearance = appearance

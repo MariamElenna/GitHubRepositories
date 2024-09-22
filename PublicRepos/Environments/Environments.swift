@@ -14,10 +14,11 @@ struct Environments {
     }
 
     private let infoDictionary: [String: Any]
-    // or we can declare it like that
-    // If cannot find Info.plist, simply crash as it is a developer error and should never happen
-    // private static let infoDictionary: [String: Any] = Bundle.main.infoDictionary!
-    // but i don't like to use static as it work as global constant or configuration value and i like error handling more
+    /* or we can declare it like that
+     If cannot find Info.plist, simply crash as it is a developer error and should never happen
+     private static let infoDictionary: [String: Any] = Bundle.main.infoDictionary!
+     but i don't like to use static as it work as global constant
+     or configuration value and i like error handling more*/
 
     init() {
         guard let infoDict = Bundle.main.infoDictionary else {

@@ -10,7 +10,7 @@ import XCTest
 
 final class MockRepositoryDetailsService: RepositoryDetailsApiProtocol {
     var error: APIError?
-    
+
     func fetchRepositoryDetails(fullName: String) async throws -> PublicRepos.RepositoryModel {
         // Load mock data from JSON file
         let repo = try loadMockRepositoryDetails()

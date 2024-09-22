@@ -36,10 +36,14 @@
 		547DFF752C9F70FB002F5DBD /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547DFF742C9F70FB002F5DBD /* AppColors.swift */; };
 		547DFF7B2C9F9A9F002F5DBD /* RepositoryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547DFF7A2C9F9A9F002F5DBD /* RepositoryRowView.swift */; };
 		54C920152CA04AEC0070FE5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54C920142CA04AEC0070FE5C /* LaunchScreen.storyboard */; };
+		54C920182CA051A80070FE5C /* ProxyLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C920172CA051A80070FE5C /* ProxyLogger.swift */; };
+		54C9201B2CA05A1B0070FE5C /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C9201A2CA05A1B0070FE5C /* String+Extension.swift */; };
+		54C920252CA06F110070FE5C /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 54C920242CA06F110070FE5C /* .swiftlint.yml */; };
+		54C920292CA0750B0070FE5C /* RepositoryDetailsUIModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C920282CA0750B0070FE5C /* RepositoryDetailsUIModelTest.swift */; };
+		54C9202D2CA07A350070FE5C /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 54C9202C2CA07A350070FE5C /* Localizable.xcstrings */; };
 		54D9310A2CA0120A0052B9E2 /* RepositoryUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D931092CA0120A0052B9E2 /* RepositoryUIModel.swift */; };
 		54D9310C2CA025220052B9E2 /* RepositoryDetailsUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D9310B2CA025220052B9E2 /* RepositoryDetailsUIModel.swift */; };
 		54D9310F2CA026560052B9E2 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D9310E2CA026560052B9E2 /* Int+Extension.swift */; };
-		54D931132CA028360052B9E2 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 54D931122CA028360052B9E2 /* Localizable.xcstrings */; };
 		54D931182CA02E2A0052B9E2 /* RepositoryModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D931172CA02E2A0052B9E2 /* RepositoryModelTest.swift */; };
 		54D9311A2CA02FB40052B9E2 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D931192CA02FB40052B9E2 /* DataLoader.swift */; };
 		54D9311C2CA02FDE0052B9E2 /* MockFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D9311B2CA02FDE0052B9E2 /* MockFiles.swift */; };
@@ -102,10 +106,14 @@
 		547DFF742C9F70FB002F5DBD /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		547DFF7A2C9F9A9F002F5DBD /* RepositoryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryRowView.swift; sourceTree = "<group>"; };
 		54C920142CA04AEC0070FE5C /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		54C920172CA051A80070FE5C /* ProxyLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyLogger.swift; sourceTree = "<group>"; };
+		54C9201A2CA05A1B0070FE5C /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		54C920242CA06F110070FE5C /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		54C920282CA0750B0070FE5C /* RepositoryDetailsUIModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsUIModelTest.swift; sourceTree = "<group>"; };
+		54C9202C2CA07A350070FE5C /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		54D931092CA0120A0052B9E2 /* RepositoryUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryUIModel.swift; sourceTree = "<group>"; };
 		54D9310B2CA025220052B9E2 /* RepositoryDetailsUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsUIModel.swift; sourceTree = "<group>"; };
 		54D9310E2CA026560052B9E2 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
-		54D931122CA028360052B9E2 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		54D931172CA02E2A0052B9E2 /* RepositoryModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryModelTest.swift; sourceTree = "<group>"; };
 		54D931192CA02FB40052B9E2 /* DataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
 		54D9311B2CA02FDE0052B9E2 /* MockFiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFiles.swift; sourceTree = "<group>"; };
@@ -173,11 +181,12 @@
 				547DFF402C9E3BCC002F5DBD /* Helpers */,
 				547DFF2D2C9D3C7E002F5DBD /* Info.plist */,
 				547DFEF72C9C7C37002F5DBD /* Assets.xcassets */,
+				54C9202C2CA07A350070FE5C /* Localizable.xcstrings */,
 				547DFEF92C9C7C37002F5DBD /* PublicRepos.entitlements */,
 				547DFEF32C9C7C35002F5DBD /* PublicReposApp.swift */,
 				547DFEFA2C9C7C37002F5DBD /* Preview Content */,
-				54D931122CA028360052B9E2 /* Localizable.xcstrings */,
 				54C920142CA04AEC0070FE5C /* LaunchScreen.storyboard */,
+				54C920242CA06F110070FE5C /* .swiftlint.yml */,
 			);
 			path = PublicRepos;
 			sourceTree = "<group>";
@@ -315,6 +324,7 @@
 			isa = PBXGroup;
 			children = (
 				547DFF412C9E3BD9002F5DBD /* ImageCashe.swift */,
+				54C920172CA051A80070FE5C /* ProxyLogger.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -465,6 +475,7 @@
 			children = (
 				54D9311D2CA03EBF0052B9E2 /* UI+Extensions */,
 				54D9310E2CA026560052B9E2 /* Int+Extension.swift */,
+				54C9201A2CA05A1B0070FE5C /* String+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -473,6 +484,7 @@
 			isa = PBXGroup;
 			children = (
 				54D931172CA02E2A0052B9E2 /* RepositoryModelTest.swift */,
+				54C920282CA0750B0070FE5C /* RepositoryDetailsUIModelTest.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -496,6 +508,7 @@
 				547DFEEC2C9C7C35002F5DBD /* Sources */,
 				547DFEED2C9C7C35002F5DBD /* Frameworks */,
 				547DFEEE2C9C7C35002F5DBD /* Resources */,
+				54C920192CA0543C0070FE5C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -572,7 +585,6 @@
 			knownRegions = (
 				en,
 				Base,
-				ar,
 			);
 			mainGroup = 547DFEE72C9C7C35002F5DBD;
 			productRefGroup = 547DFEF12C9C7C35002F5DBD /* Products */;
@@ -591,10 +603,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54C920252CA06F110070FE5C /* .swiftlint.yml in Resources */,
+				54C9202D2CA07A350070FE5C /* Localizable.xcstrings in Resources */,
 				547DFEFC2C9C7C37002F5DBD /* Preview Assets.xcassets in Resources */,
 				54C920152CA04AEC0070FE5C /* LaunchScreen.storyboard in Resources */,
 				547DFEF82C9C7C37002F5DBD /* Assets.xcassets in Resources */,
-				54D931132CA028360052B9E2 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -616,6 +629,28 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		54C920192CA0543C0070FE5C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		547DFEEC2C9C7C35002F5DBD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -629,6 +664,7 @@
 				547DFF5E2C9EF39D002F5DBD /* RepositoriesService.swift in Sources */,
 				547DFF202C9C86A3002F5DBD /* RepositoryModel.swift in Sources */,
 				547DFF442C9E3C08002F5DBD /* CachedAsyncImage.swift in Sources */,
+				54C9201B2CA05A1B0070FE5C /* String+Extension.swift in Sources */,
 				54D9310C2CA025220052B9E2 /* RepositoryDetailsUIModel.swift in Sources */,
 				547DFF5B2C9EECFC002F5DBD /* RepositoryDetailsApiProtocol.swift in Sources */,
 				547DFF272C9C88B2002F5DBD /* ApiRouter.swift in Sources */,
@@ -643,6 +679,7 @@
 				547DFF572C9EEB08002F5DBD /* RepositoriesApiProtocol.swift in Sources */,
 				547DFF392C9DD6C5002F5DBD /* RepositoriesViewModel.swift in Sources */,
 				547DFEF42C9C7C35002F5DBD /* PublicReposApp.swift in Sources */,
+				54C920182CA051A80070FE5C /* ProxyLogger.swift in Sources */,
 				54D931212CA03EE40052B9E2 /* Color+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -653,6 +690,7 @@
 			files = (
 				547DFF4C2C9E588F002F5DBD /* RepositoryDetailsViewModelTests.swift in Sources */,
 				54D931182CA02E2A0052B9E2 /* RepositoryModelTest.swift in Sources */,
+				54C920292CA0750B0070FE5C /* RepositoryDetailsUIModelTest.swift in Sources */,
 				54D9311C2CA02FDE0052B9E2 /* MockFiles.swift in Sources */,
 				54D9311A2CA02FB40052B9E2 /* DataLoader.swift in Sources */,
 				547DFF472C9E4EEB002F5DBD /* RepositoriesViewModelTests.swift in Sources */,
@@ -814,6 +852,7 @@
 				DEVELOPMENT_TEAM = G6V8E9TP27;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PublicRepos/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -854,6 +893,7 @@
 				DEVELOPMENT_TEAM = G6V8E9TP27;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PublicRepos/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;

@@ -31,15 +31,15 @@ struct RepositoryDetailsView: View {
                 }
                 Text("Owner: \(repository.ownerName)")
                     .font(.title2)
-                
+
                 Text(repository.description)
                     .font(.body)
                     .padding(.top)
-                
+
                 Text("Created on: \(repository.creationData)")
                     .font(.caption)
                     .foregroundColor(.gray)
-                
+
             }
             Spacer()
         }

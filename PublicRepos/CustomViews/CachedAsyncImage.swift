@@ -36,7 +36,7 @@ struct CachedAsyncImage<Placeholder: View>: View {
 
     private func loadImage() {
         guard let url = url else { return }
-        
+
         // Check if the image is already cached
         if let cachedImage = imageCache.getImage(forKey: url.absoluteString) {
             image = cachedImage
@@ -55,7 +55,8 @@ struct CachedAsyncImage<Placeholder: View>: View {
                 }
             } catch {
                 // Handle the error if image fails to load
-                print("Failed to load image from URL: \(error)")
+                let logger = ProxyLogger(subsystem: "com.yourapp", category: "ImageLoading")
+                logger.log("Failed to load image from URL: \(error.localizedDescription)", level: .error)
             }
         }
     }

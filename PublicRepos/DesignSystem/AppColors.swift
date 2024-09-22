@@ -8,7 +8,7 @@
 import SwiftUI
 
 enum AppColors: String, ShapeStyle {
-    
+
     case mainColor = "FFC0CB"
     case headerColor = "ED1273"
     case bodyColor = "000000"
