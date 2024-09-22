@@ -11,7 +11,7 @@ import XCTest
 final class RepositoryModelTest: XCTestCase {
 
     private let repoObject = DataLoader().loadJsonData(file: .repoDetailsFile)!
-    
+
     // Test formattedDate function with date less than 6 months ago
     func testFormattedDateWithin6Months() throws {
         let recentDate = "2024-05-01T14:37:16Z" // A recent date

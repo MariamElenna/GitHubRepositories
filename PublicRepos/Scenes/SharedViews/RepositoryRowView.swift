@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct RepositoryRowView: View {
-    let repository: RepositoryRowUIModel // Parameter to accept the object
+    let repository: RepositoryRowUIModel
 
     var body: some View {
         HStack {
@@ -34,11 +34,11 @@ struct RepositoryRowView: View {
                     .font(.headline)
                 
                 // Owner name
-                Text("Owner: " + "\(repository.ownerName)")
+                Text("Owner: \(repository.ownerName)")
                     .font(.subheadline)
                 
                 // Created date formatted
-                Text("Created At: " + "\(repository.creationData)")
+                Text("Created At: \(repository.creationData)")
                     .font(.subheadline)
             }
         }

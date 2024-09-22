@@ -17,21 +17,20 @@ class RepositoryDetailsViewModel: ObservableObject {
         self.repositoryDetailsService = repositoryDetailsService
     }
     
-    @MainActor func fetchRepositoryDetails(fullName: String) {
-        Task {
-            isLoading = true
-            // Do, catch and try are used to handle the errors the function may throw.
-            do {
-                self.repository = try await RepositoryDetailsUIModel(from: repositoryDetailsService.fetchRepositoryDetails(fullName: fullName))
-                self.isLoading = false
-            } catch let error as APIError {
-                self.isLoading = false
-                throw error
-            } catch {
-                self.errorMessage = "Failed to load repository details: " + "\(error.localizedDescription)"
-                self.isLoading = false
-                throw APIError.unknownError
-            }
+    @MainActor 
+    func fetchRepositoryDetails(fullName: String) async {
+        isLoading = true
+        // Do, catch and try are used to handle the errors the function may throw.
+        do {
+            self.repository = try await RepositoryDetailsUIModel(from: repositoryDetailsService.fetchRepositoryDetails(fullName: fullName))
+            self.isLoading = false
+        } catch let error as APIError {
+            self.errorMessage = "Failed to load repository details: \(error.localizedDescription)"
+            self.isLoading = false
+        } catch {
+            self.errorMessage = "Failed to load repository details: \(error.localizedDescription)"
+            self.isLoading = false
         }
+        
     }
 }

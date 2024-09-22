@@ -12,7 +12,7 @@ struct PublicReposApp: App {
     init() {
         // Customize navigation bar appearance
         let appearance = UINavigationBarAppearance()
-        appearance.backgroundColor = AppColors.maincolor.uiColor
+        appearance.backgroundColor = UIColor(appColor: .mainColor)
         appearance.buttonAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor.black] // Change button color
         // Apply appearance settings
         UINavigationBar.appearance().standardAppearance = appearance

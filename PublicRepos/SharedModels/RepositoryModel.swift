@@ -43,7 +43,7 @@ struct RepositoryModel : Decodable {
     var formattedUpdateDate: String {
         return formattedDate(from: updatedAt)
     }
-
+    
     enum CodingKeys: String, CodingKey {
         case createdAt = "created_at"
         case descriptionField = "description"

@@ -18,23 +18,21 @@ class RepositoriesViewModel: ObservableObject {
         self.repositoriesService = repositoriesService
     }
     // Fetch Repositories
-    @MainActor func fetchRepositories() {
-        Task {
-            isLoading = true
-            // Do, catch and try are used to handle the errors the function may throw.
-            do {
-                self.repositories = try await repositoriesService.fetchRepositories().map { repo -> RepositoryRowUIModel in
-                    return RepositoryRowUIModel(from: repo)
-                }
-                self.isLoading = false
-            } catch let error as APIError {
-                self.error = error
-                self.isLoading = false
-                throw error
-            } catch {
-                self.isLoading = false
-                throw APIError.unknownError
+    @MainActor
+    func fetchRepositories() async {
+        isLoading = true
+        // Do, catch and try are used to handle the errors the function may throw.
+        do {
+            self.repositories = try await repositoriesService.fetchRepositories().map { repo -> RepositoryRowUIModel in
+                return RepositoryRowUIModel(from: repo)
             }
+            self.isLoading = false
+        } catch let error as APIError {
+            self.error = error
+            self.isLoading = false
+        } catch {
+            self.isLoading = false
         }
     }
 }
+

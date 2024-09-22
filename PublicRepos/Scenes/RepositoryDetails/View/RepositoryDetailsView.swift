@@ -29,21 +29,22 @@ struct RepositoryDetailsView: View {
                         .frame(width: 50, height: 50)
                         .clipShape(Circle())
                 }
-                Text("Owner: " + "\(repository.ownerName)")
+                Text("Owner: \(repository.ownerName)")
                     .font(.title2)
                 
                 Text(repository.description)
                     .font(.body)
                     .padding(.top)
                 
-                Text("Created on: " + "\(repository.creationData)")
+                Text("Created on: \(repository.creationData)")
                     .font(.caption)
                     .foregroundColor(.gray)
                 
             }
             Spacer()
-        }.onAppear {
-            viewModel.fetchRepositoryDetails(fullName: fullName )
+        }
+        .task {
+            await viewModel.fetchRepositoryDetails(fullName: fullName )
         }
         .padding()
         .navigationBarTitleDisplayMode(.inline)

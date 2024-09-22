@@ -42,6 +42,8 @@
 		54D931182CA02E2A0052B9E2 /* RepositoryModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D931172CA02E2A0052B9E2 /* RepositoryModelTest.swift */; };
 		54D9311A2CA02FB40052B9E2 /* DetaLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D931192CA02FB40052B9E2 /* DetaLoader.swift */; };
 		54D9311C2CA02FDE0052B9E2 /* MockFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D9311B2CA02FDE0052B9E2 /* MockFiles.swift */; };
+		54D9311F2CA03ED60052B9E2 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D9311E2CA03ED60052B9E2 /* UIColor+Extension.swift */; };
+		54D931212CA03EE40052B9E2 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D931202CA03EE40052B9E2 /* Color+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +107,8 @@
 		54D931172CA02E2A0052B9E2 /* RepositoryModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryModelTest.swift; sourceTree = "<group>"; };
 		54D931192CA02FB40052B9E2 /* DetaLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetaLoader.swift; sourceTree = "<group>"; };
 		54D9311B2CA02FDE0052B9E2 /* MockFiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFiles.swift; sourceTree = "<group>"; };
+		54D9311E2CA03ED60052B9E2 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		54D931202CA03EE40052B9E2 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -456,6 +460,7 @@
 		54D9310D2CA026450052B9E2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				54D9311D2CA03EBF0052B9E2 /* UI+Extensions */,
 				54D9310E2CA026560052B9E2 /* Int+Extension.swift */,
 			);
 			path = Extensions;
@@ -467,6 +472,15 @@
 				54D931172CA02E2A0052B9E2 /* RepositoryModelTest.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		54D9311D2CA03EBF0052B9E2 /* UI+Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				54D9311E2CA03ED60052B9E2 /* UIColor+Extension.swift */,
+				54D931202CA03EE40052B9E2 /* Color+Extension.swift */,
+			);
+			path = "UI+Extensions";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -606,6 +620,7 @@
 				547DFF602C9EF3B4002F5DBD /* RepositoryDetailsService.swift in Sources */,
 				547DFF4A2C9E5809002F5DBD /* RepositoryDetailsViewModel.swift in Sources */,
 				547DFF6F2C9F30B2002F5DBD /* ApiErrorsEnum.swift in Sources */,
+				54D9311F2CA03ED60052B9E2 /* UIColor+Extension.swift in Sources */,
 				54D9310F2CA026560052B9E2 /* Int+Extension.swift in Sources */,
 				547DFF5E2C9EF39D002F5DBD /* RepositoriesService.swift in Sources */,
 				547DFF202C9C86A3002F5DBD /* RepositoryModel.swift in Sources */,
@@ -624,6 +639,7 @@
 				547DFF572C9EEB08002F5DBD /* RepositoriesApiProtocol.swift in Sources */,
 				547DFF392C9DD6C5002F5DBD /* RepositoriesViewModel.swift in Sources */,
 				547DFEF42C9C7C35002F5DBD /* PublicReposApp.swift in Sources */,
+				54D931212CA03EE40052B9E2 /* Color+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
