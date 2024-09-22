@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct RepositoryOwnerModel : Codable {
+struct RepositoryOwnerModel : Decodable {
     let avatarUrl : String?
     let eventsUrl : String?
     let followersUrl : String?

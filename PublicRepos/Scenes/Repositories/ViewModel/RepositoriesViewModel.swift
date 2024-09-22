@@ -8,7 +8,7 @@
 import Foundation
 
 class RepositoriesViewModel: ObservableObject {
-    @Published var repositories: [RepositoryModel] = []
+    @Published var repositories: [RepositoryRowUIModel] = []
     @Published var error: APIError?
     @Published var isLoading: Bool = false
     
@@ -23,10 +23,11 @@ class RepositoriesViewModel: ObservableObject {
             isLoading = true
             // Do, catch and try are used to handle the errors the function may throw.
             do {
-                self.repositories = try await repositoriesService.fetchRepositories()
+                self.repositories = try await repositoriesService.fetchRepositories().map { repo -> RepositoryRowUIModel in
+                    return RepositoryRowUIModel(from: repo)
+                }
                 self.isLoading = false
             } catch let error as APIError {
-                print("API Error: \(error.localizedDescription)")
                 self.error = error
                 self.isLoading = false
                 throw error

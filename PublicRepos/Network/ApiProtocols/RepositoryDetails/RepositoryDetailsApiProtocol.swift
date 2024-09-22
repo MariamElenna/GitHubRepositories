@@ -8,5 +8,5 @@
 import Foundation
 
 protocol RepositoryDetailsApiProtocol {
-    func fetchRepositoryDetails(fullName: String) async throws -> RepositoryDetailsModel
+    func fetchRepositoryDetails(fullName: String) async throws -> RepositoryModel
 }

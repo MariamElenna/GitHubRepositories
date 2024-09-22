@@ -17,7 +17,7 @@ struct RepositoryDetailsView: View {
         VStack(spacing: 10) {
             if let repository = viewModel.repository {
                 // Repository owner avatar
-                if let avatarURL = repository.owner?.avatarUrl,
+                if let avatarURL = repository.ownerAvatar,
                    let url = URL(string: avatarURL) {
                     CachedAsyncImage(url: url) {
                         ProgressView() // Placeholder while loading
@@ -29,14 +29,14 @@ struct RepositoryDetailsView: View {
                         .frame(width: 50, height: 50)
                         .clipShape(Circle())
                 }
-                Text("Owner: \(repository.owner?.login ?? "Unknown")")
+                Text("Owner: " + "\(repository.ownerName)")
                     .font(.title2)
-                if let description = repository.descriptionField {
-                    Text(description)
-                        .font(.body)
-                        .padding(.top)
-                }
-                Text("Created on: \(viewModel.formattedDate(from: repository.createdAt))")
+                
+                Text(repository.description)
+                    .font(.body)
+                    .padding(.top)
+                
+                Text("Created on: " + "\(repository.creationData)")
                     .font(.caption)
                     .foregroundColor(.gray)
                 

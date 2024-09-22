@@ -1,4 +1,15 @@
 #  Read Me
+Overview
+The PublicRepos App is an iOS application developed using SwiftUI and the MVVM (Model-View-ViewModel) architecture. It provides users with public GitHub repositories. The app allows users to view repo details, and see repo owner.
+
+Features
+
+View all repositories information().
+View detailed weather information, including temperature, humidity, and wind speed.
+Displays a historical log of weather data for added cities.
+Handles network connectivity changes gracefully.
+Uses modern Swift features including async/await for network calls that come from the backend using objective c 'Network Layer'
+
 
 I am writing these notes to help you navigate the app, understand why I am doing specific things
 

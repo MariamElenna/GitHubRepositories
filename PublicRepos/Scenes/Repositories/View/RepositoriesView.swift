@@ -14,7 +14,7 @@ struct RepositoriesView: View {
     var body: some View {
         NavigationView {
             List(viewModel.repositories) { repository in // Use repositories from ViewModel
-                NavigationLink(destination: RepositoryDetailsView(fullName: repository.fullName ?? "")) { // Link to Detail View
+                NavigationLink(destination: RepositoryDetailsView(fullName: repository.repoName)) { // Link to Detail View
                     RepositoryRowView(repository: repository)
                 }
             }

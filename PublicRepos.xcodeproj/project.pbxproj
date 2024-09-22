@@ -14,7 +14,6 @@
 		547DFF122C9C7C38002F5DBD /* PublicReposUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547DFF112C9C7C38002F5DBD /* PublicReposUITestsLaunchTests.swift */; };
 		547DFF202C9C86A3002F5DBD /* RepositoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547DFF1F2C9C86A3002F5DBD /* RepositoryModel.swift */; };
 		547DFF222C9C8761002F5DBD /* RepositoryOwnerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547DFF212C9C8761002F5DBD /* RepositoryOwnerModel.swift */; };
-		547DFF242C9C87C7002F5DBD /* RepositoryDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547DFF232C9C87C7002F5DBD /* RepositoryDetailsModel.swift */; };
 		547DFF272C9C88B2002F5DBD /* ApiRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547DFF262C9C88B2002F5DBD /* ApiRouter.swift */; };
 		547DFF302C9D3DB3002F5DBD /* Environments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547DFF2F2C9D3DB3002F5DBD /* Environments.swift */; };
 		547DFF362C9DD538002F5DBD /* RepositoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547DFF352C9DD538002F5DBD /* RepositoriesView.swift */; };
@@ -36,6 +35,10 @@
 		547DFF6F2C9F30B2002F5DBD /* ApiErrorsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547DFF6E2C9F30B2002F5DBD /* ApiErrorsEnum.swift */; };
 		547DFF752C9F70FB002F5DBD /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547DFF742C9F70FB002F5DBD /* AppColors.swift */; };
 		547DFF7B2C9F9A9F002F5DBD /* RepositoryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547DFF7A2C9F9A9F002F5DBD /* RepositoryRowView.swift */; };
+		54D9310A2CA0120A0052B9E2 /* RepositoryUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D931092CA0120A0052B9E2 /* RepositoryUIModel.swift */; };
+		54D9310C2CA025220052B9E2 /* RepositoryDetailsUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D9310B2CA025220052B9E2 /* RepositoryDetailsUIModel.swift */; };
+		54D9310F2CA026560052B9E2 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D9310E2CA026560052B9E2 /* Int+Extension.swift */; };
+		54D931132CA028360052B9E2 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 54D931122CA028360052B9E2 /* Localizable.xcstrings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +70,6 @@
 		547DFF112C9C7C38002F5DBD /* PublicReposUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicReposUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		547DFF1F2C9C86A3002F5DBD /* RepositoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryModel.swift; sourceTree = "<group>"; };
 		547DFF212C9C8761002F5DBD /* RepositoryOwnerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryOwnerModel.swift; sourceTree = "<group>"; };
-		547DFF232C9C87C7002F5DBD /* RepositoryDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsModel.swift; sourceTree = "<group>"; };
 		547DFF262C9C88B2002F5DBD /* ApiRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRouter.swift; sourceTree = "<group>"; };
 		547DFF2B2C9D3B0D002F5DBD /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		547DFF2C2C9D3B90002F5DBD /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
@@ -93,6 +95,10 @@
 		547DFF6E2C9F30B2002F5DBD /* ApiErrorsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiErrorsEnum.swift; sourceTree = "<group>"; };
 		547DFF742C9F70FB002F5DBD /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		547DFF7A2C9F9A9F002F5DBD /* RepositoryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryRowView.swift; sourceTree = "<group>"; };
+		54D931092CA0120A0052B9E2 /* RepositoryUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryUIModel.swift; sourceTree = "<group>"; };
+		54D9310B2CA025220052B9E2 /* RepositoryDetailsUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsUIModel.swift; sourceTree = "<group>"; };
+		54D9310E2CA026560052B9E2 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
+		54D931122CA028360052B9E2 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +153,7 @@
 				547DFF252C9C8898002F5DBD /* Network */,
 				547DFF312C9DD4E5002F5DBD /* Scenes */,
 				547DFF452C9E4530002F5DBD /* CustomViews */,
+				54D9310D2CA026450052B9E2 /* Extensions */,
 				547DFF1E2C9C8650002F5DBD /* SharedModels */,
 				547DFF2A2C9D3AE4002F5DBD /* Configs */,
 				547DFF3D2C9E2BFE002F5DBD /* DesignSystem */,
@@ -157,6 +164,7 @@
 				547DFEF92C9C7C37002F5DBD /* PublicRepos.entitlements */,
 				547DFEF32C9C7C35002F5DBD /* PublicReposApp.swift */,
 				547DFEFA2C9C7C37002F5DBD /* Preview Content */,
+				54D931122CA028360052B9E2 /* Localizable.xcstrings */,
 			);
 			path = PublicRepos;
 			sourceTree = "<group>";
@@ -191,6 +199,7 @@
 		547DFF1E2C9C8650002F5DBD /* SharedModels */ = {
 			isa = PBXGroup;
 			children = (
+				547DFF1F2C9C86A3002F5DBD /* RepositoryModel.swift */,
 				547DFF212C9C8761002F5DBD /* RepositoryOwnerModel.swift */,
 			);
 			path = SharedModels;
@@ -373,7 +382,7 @@
 		547DFF692C9F28FF002F5DBD /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				547DFF1F2C9C86A3002F5DBD /* RepositoryModel.swift */,
+				54D931092CA0120A0052B9E2 /* RepositoryUIModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -381,7 +390,7 @@
 		547DFF6A2C9F2911002F5DBD /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				547DFF232C9C87C7002F5DBD /* RepositoryDetailsModel.swift */,
+				54D9310B2CA025220052B9E2 /* RepositoryDetailsUIModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -433,6 +442,14 @@
 				547DFF7A2C9F9A9F002F5DBD /* RepositoryRowView.swift */,
 			);
 			path = SharedViews;
+			sourceTree = "<group>";
+		};
+		54D9310D2CA026450052B9E2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				54D9310E2CA026560052B9E2 /* Int+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -521,6 +538,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = 547DFEE72C9C7C35002F5DBD;
 			productRefGroup = 547DFEF12C9C7C35002F5DBD /* Products */;
@@ -541,6 +559,7 @@
 			files = (
 				547DFEFC2C9C7C37002F5DBD /* Preview Assets.xcassets in Resources */,
 				547DFEF82C9C7C37002F5DBD /* Assets.xcassets in Resources */,
+				54D931132CA028360052B9E2 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -570,19 +589,21 @@
 				547DFF602C9EF3B4002F5DBD /* RepositoryDetailsService.swift in Sources */,
 				547DFF4A2C9E5809002F5DBD /* RepositoryDetailsViewModel.swift in Sources */,
 				547DFF6F2C9F30B2002F5DBD /* ApiErrorsEnum.swift in Sources */,
+				54D9310F2CA026560052B9E2 /* Int+Extension.swift in Sources */,
 				547DFF5E2C9EF39D002F5DBD /* RepositoriesService.swift in Sources */,
 				547DFF202C9C86A3002F5DBD /* RepositoryModel.swift in Sources */,
 				547DFF442C9E3C08002F5DBD /* CachedAsyncImage.swift in Sources */,
+				54D9310C2CA025220052B9E2 /* RepositoryDetailsUIModel.swift in Sources */,
 				547DFF5B2C9EECFC002F5DBD /* RepositoryDetailsApiProtocol.swift in Sources */,
 				547DFF272C9C88B2002F5DBD /* ApiRouter.swift in Sources */,
 				547DFF7B2C9F9A9F002F5DBD /* RepositoryRowView.swift in Sources */,
+				54D9310A2CA0120A0052B9E2 /* RepositoryUIModel.swift in Sources */,
 				547DFF752C9F70FB002F5DBD /* AppColors.swift in Sources */,
 				547DFF422C9E3BD9002F5DBD /* ImageCashe.swift in Sources */,
 				547DFF3C2C9DEBF6002F5DBD /* RepositoryDetailsView.swift in Sources */,
 				547DFF222C9C8761002F5DBD /* RepositoryOwnerModel.swift in Sources */,
 				547DFF302C9D3DB3002F5DBD /* Environments.swift in Sources */,
 				547DFF362C9DD538002F5DBD /* RepositoriesView.swift in Sources */,
-				547DFF242C9C87C7002F5DBD /* RepositoryDetailsModel.swift in Sources */,
 				547DFF572C9EEB08002F5DBD /* RepositoriesApiProtocol.swift in Sources */,
 				547DFF392C9DD6C5002F5DBD /* RepositoriesViewModel.swift in Sources */,
 				547DFEF42C9C7C35002F5DBD /* PublicReposApp.swift in Sources */,
