@@ -1,5 +1,5 @@
 //
-//  DetaLoader.swift
+//  DataLoader.swift
 //  PublicReposTests
 //
 //  Created by Mariam on 22/09/2024.

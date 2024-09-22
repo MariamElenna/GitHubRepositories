@@ -29,3 +29,5 @@ Cashing images to save number of network calls
 Testing ViewModels
 
 Testing Models
+
+#Please Read code comments

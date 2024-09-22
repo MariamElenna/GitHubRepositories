@@ -10,9 +10,8 @@ import SwiftUI
 struct CachedAsyncImage<Placeholder: View>: View {
     private let url: URL?
     private let placeholder: Placeholder
-    private let imageCache = ImageCacheWithExpiration.shared
+    private let imageCache = ImageCache.shared
 
-    
     @State private var image: UIImage?
 
     init(url: URL?, @ViewBuilder placeholder: () -> Placeholder) {
